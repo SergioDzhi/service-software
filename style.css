@@ -9,7 +9,6 @@ html {
   box-sizing: inherit;
 }
 
-
 @font-face {
   font-family: "TT Lakes";
   font-style: normal;
@@ -29,7 +28,7 @@ html {
 }
 
 @font-face {
-  font-family: 'TT Lakes';
+  font-family: "TT Lakes";
   font-style: normal;
   font-weight: 900;
 
@@ -37,33 +36,19 @@ html {
     url("./fonts/TTLakes-Black.woff") format("woff");
 }
 
-
-
 body {
   margin: 0;
   padding: 0;
   font-family: "TT Lakes regular", "Arial", sans-serif;
-  box-shadow: 0 -1px #D9FFF5;
+  box-shadow: 0 -1px #d9fff5;
 }
-
-
-
-
 
 .wrapper {
   min-width: 320px;
   max-width: 1120px;
   margin: 0 auto;
   position: relative;
-
-
 }
-
-
-.brands {}
-
-
-.content {}
 
 .header__title {
   margin: 16px 0 0 0;
@@ -72,47 +57,36 @@ body {
   font-weight: normal;
   line-height: 24px;
   letter-spacing: -0.2px;
-  color: #7E7E82;
+  color: #7e7e82;
 
   text-transform: uppercase;
   box-sizing: border-box;
-
 }
-
-.swiper-slide {}
-
 
 .card__container {
   margin-left: 16px;
   margin-top: 16px;
 }
 
-
 .cards-list {
-
   padding: 0;
   list-style: none;
   position: relative;
   left: -27px;
   top: -4px;
-
-
-
 }
 
 .card__item {
   flex-basis: 240px;
   height: 72px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid #eaeaea;
   border-radius: 6px;
   box-sizing: border-box;
   margin: 8px;
-
 }
 
 .card__item:first-of-type {
   margin-left: 0;
-
 }
 
 .card__link {
@@ -120,26 +94,22 @@ body {
   width: 100%;
   height: 72px;
   transition: opacity 0.3s;
-
-
 }
 
-
-
+.hidden {
+  display: none;
+}
 
 .lenovo {
-
   background: url("images/Lenovo.png"), url("images/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
 }
 
 .samsung {
   background: url("images/Samsung.png"), url("images/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
 }
 
 .apple {
@@ -153,23 +123,18 @@ body {
   background: url("images/ViewSonic.png"), url("images/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
 }
 
 .bosch {
   background: url("images/Bocsh.png"), url("images/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
 }
 
 .hp {
   background: url("images/HP.png"), url("images/go.svg");
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
-
-
 }
 
 .acer {
@@ -177,7 +142,6 @@ body {
 
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
 }
 
 .sony {
@@ -185,26 +149,22 @@ body {
 
   background-position: 16px, 160px;
   background-repeat: no-repeat;
-
 }
 
 .swiper-pagination {
-
   display: flex;
-  transition: .3s opacity;
+  transition: 0.3s opacity;
   transform: translate3d(0, 0, 0);
-
 }
 
 .swiper-pagination-bullet {
-  width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 12px));
-  height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 12px));
+  width: var(--swiper-pagination-bullet-width,
+      var(--swiper-pagination-bullet-size, 12px));
+  height: var(--swiper-pagination-bullet-height,
+      var(--swiper-pagination-bullet-size, 12px));
 }
 
-
-
 .change__btn {
-
   border: none;
   padding: 0;
   display: flex;
@@ -213,11 +173,11 @@ body {
   letter-spacing: -0.2px;
   transition: opacity 0.3s;
   cursor: pointer;
-
+  background-color: white;
 }
 
 .change__btn::before {
-  content: '';
+  content: "";
   background-image: url("./images/icon.png");
   width: 24px;
   height: 24px;
@@ -230,48 +190,31 @@ body {
 
 .show {
   display: none;
-  background-color: white;
 }
 
 @media screen and (min-width: 768px) {
-  .hidden {
-    display: block;
+  .revert::before {
+    content: "";
+    transform: rotate(180deg);
   }
 
   .change__btn {
     display: flex;
     width: 133px;
-    height: 24px;
-
   }
 
   .header__title {
     width: 100%;
   }
 
-
-
   .card__item {
     flex-basis: 222px;
     margin: 0;
-
-
   }
 
   .card__link {
-
     width: 222px;
-
-
-
   }
-
-  li:nth-child(n+7) {
-    display: none;
-
-
-  }
-
 
   .cards-list {
     display: flex;
@@ -279,40 +222,27 @@ body {
     gap: 16px 26px;
     position: static;
     max-width: 768px;
+    margin-bottom: 24px;
   }
-
 }
 
 @media screen and (min-width: 1120px) {
-  .change__btn {}
 
-
-  li:nth-child(7),
-  li:nth-child(8) {
+  .card__item:nth-child(7),
+  .card__item:nth-child(8) {
     display: block;
-  }
-
-
-  li:nth-child(n+9) {
-    display: none;
-
-
   }
 
   .card__item {
     flex-basis: 240px;
     margin: 0;
-
-
   }
 
   .card__link {
     width: 100%;
   }
 
-
   .cards-list {
-
     gap: 16px 32px;
 
     min-width: 1120px;
@@ -320,8 +250,5 @@ body {
 
   .card__container {
     margin-top: 15px;
-
-
-
   }
 }
