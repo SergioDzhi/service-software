@@ -153,6 +153,7 @@ body {
 
 .swiper-pagination {
   display: flex;
+  justify-content: center;
   transition: 0.3s opacity;
   transform: translate3d(0, 0, 0);
 }
